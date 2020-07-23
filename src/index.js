@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 
 import { Colors } from './constants';

@@ -1,9 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image, Dimensions } from 'react-native';
 
 import CountryPicker from './CountryPicker';
 import Card from './Card';
 import { Colors } from '../constants/index';
+
+const { width } = Dimensions.get('window');
+const imageSize = width * 0.7;
 
 const styles = StyleSheet.create({
   container: {
@@ -12,13 +15,20 @@ const styles = StyleSheet.create({
   },
   headerView: {
     backgroundColor: Colors.primaryColor,
-    height: 190,
+    height: 200,
     padding: 14,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
   },
+  image: {
+    height: imageSize,
+    width: imageSize,
+    marginTop: 20,
+    borderRadius: 26
+
+  },
   contentView: {
-    marginTop: -60,
+    marginTop: -50,
     alignItems: 'center',
   },
   title: {
@@ -96,6 +106,7 @@ const Header = ({ data: { confirmed, recovered, deaths, lastUpdate }, handleCoun
             );
           }}
         />
+        <Image source={require('../constants/coronaImg.png')} style={styles.image} />
       </View>
     </View>
   );

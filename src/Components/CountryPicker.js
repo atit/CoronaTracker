@@ -12,7 +12,7 @@ class CountryPicker extends React.Component {
   async componentDidMount() {
     const fetchedCountries = await fetchCountries();
     this.setState({ countries: fetchedCountries });
-    console.log(fetchedCountries);
+    // console.log(fetchedCountries);
   }
 
   changeHandler = (country) => {
