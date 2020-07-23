@@ -1,3 +1,4 @@
 import Colors from './Colors';
+import { HelperFunction } from "./HelperFunction";
 
-export { Colors };
+export { Colors, HelperFunction };
