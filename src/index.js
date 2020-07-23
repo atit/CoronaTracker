@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 import { Colors } from './constants';
-import { fetchData } from '../api';
+import { fetchData } from './api/index';
 import Card from './Components/Card';
 import Header from './Components/Header';
 import CountryPicker from './Components/CountryPicker';
@@ -27,6 +27,11 @@ class App extends Component {
     const fetchedData = await fetchData();
     this.setState({ data: fetchedData });
   }
+  handleCountryChange = async country => {
+    // console.log("abcd", country);
+    const fetchedData = await fetchData(country);
+    this.setState({ data: fetchedData, country: country });
+  };
   render() {
     const { data, country } = this.state;
     return (
@@ -35,10 +40,10 @@ class App extends Component {
         <Header
           data={data}
           country={country}
-          handleCountryChange={singleCountry => this.handleCountryChange(singleCountry)} />
-        <Text>
-          Corona App!
-       </Text>
+          handleCountryChange={singleCountry =>
+            this.handleCountryChange(singleCountry)
+          }
+        />
       </SafeAreaView>
     );
   }

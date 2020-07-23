@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 
 import CountryPicker from './CountryPicker';
-import Card from '../Component/Card';
-import { Colors, HelperFunction } from '../constants';
+import Card from './Card';
+import { Colors } from '../constants/index';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,18 +12,18 @@ const styles = StyleSheet.create({
   },
   headerView: {
     backgroundColor: Colors.primaryColor,
-    height: HelperFunction.ModerateScale(190),
+    height: 190,
     padding: 14,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
   },
   contentView: {
-    marginTop: HelperFunction.ModerateScale(-60),
+    marginTop: -60,
     alignItems: 'center',
   },
   title: {
-    color: Colors.White_FFFFFF,
-    fontSize: HelperFunction.ModerateScale(20),
+    color: Colors.white,
+    fontSize: 20,
     fontWeight: 'bold',
     flex: 1,
   },
@@ -31,18 +31,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   dateText: {
-    color: Colors.White_FFFFFF,
+    color: Colors.white,
     marginTop: 28,
     fontSize: 12,
   },
   caseTitleText: {
-    color: Colors.White_FFFFFF,
-    fontSize: HelperFunction.ModerateScale(18),
-    marginTop: HelperFunction.ModerateScale(4),
+    color: Colors.white,
+    fontSize: 18,
+    marginTop: 4
   },
   casesText: {
-    color: Colors.White_FFFFFF,
-    fontSize: HelperFunction.ModerateScale(24),
+    color: Colors.white,
+    fontSize: 24,
   },
 });
 

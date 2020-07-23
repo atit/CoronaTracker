@@ -47,7 +47,6 @@ export default CountryPicker;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffffdd',
-    // backgroundColor: '#ffff00',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
