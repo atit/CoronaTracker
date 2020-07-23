@@ -8,6 +8,9 @@ import {
 
 import { Colors } from './constants';
 import { fetchData } from '../api';
+import Card from './Components/Card';
+import Header from './Components/Header';
+import CountryPicker from './Components/CountryPicker';
 
 
 const styles = StyleSheet.create({
@@ -25,9 +28,14 @@ class App extends Component {
     this.setState({ data: fetchedData });
   }
   render() {
+    const { data, country } = this.state;
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar backgroundColor={Colors.primaryColor} />
+        <Header
+          data={data}
+          country={country}
+          handleCountryChange={singleCountry => this.handleCountryChange(singleCountry)} />
         <Text>
           Corona App!
        </Text>
